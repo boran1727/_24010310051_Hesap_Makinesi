@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_24010310051_Hesap_Makinesi.Views.SettingsPage"
+             Title="Settings"
+             BackgroundColor="{AppThemeBinding Light={StaticResource LightBg}, Dark={StaticResource DarkBg}}">
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="App theme" 
+               FontSize="20" 
+               FontAttributes="Bold" 
+               TextColor="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
+
+        <Label Text="Select which app theme to display" 
+               FontSize="14" 
+               TextColor="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}" />
+
+        <RadioButton x:Name="LightRadio" 
+                     Content="Light" 
+                     GroupName="ThemeGroup" 
+                     TextColor="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}"
+                     CheckedChanged="OnThemeChanged" />
+
+        <RadioButton x:Name="DarkRadio" 
+                     Content="Dark" 
+                     GroupName="ThemeGroup" 
+                     TextColor="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}"
+                     CheckedChanged="OnThemeChanged" />
+
+        <RadioButton x:Name="SystemRadio" 
+                     Content="Use system setting" 
+                     GroupName="ThemeGroup" 
+                     TextColor="{AppThemeBinding Light={StaticResource TextPrimaryLight}, Dark={StaticResource TextPrimaryDark}}"
+                     CheckedChanged="OnThemeChanged" />
+    </StackLayout>
+</ContentPage>

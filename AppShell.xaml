@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="_24010310051_Hesap_Makinesi.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:_24010310051_Hesap_Makinesi.Views"
+       Title="Calculator">
+
+    <FlyoutItem Title="Standard">
+        <ShellContent ContentTemplate="{DataTemplate views:StandardPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Scientific">
+        <ShellContent ContentTemplate="{DataTemplate views:ScientificPage}" />
+    </FlyoutItem>
+
+    <MenuItem Text="Settings" Clicked="OnSettingsClicked" />
+
+</Shell>
